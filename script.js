@@ -40,9 +40,10 @@ const	show = {
 
 const fire = (event) => {
 	const target = event.target;
-	show.miss(target);
-
-	play.updateData = 'shot';
+	if (target.className !== 'miss') {
+		show.miss(target);
+		play.updateData = 'shot';
+	}
 
 };
 
